@@ -1,0 +1,11 @@
+﻿member_id,name,email,alt_email,city,joined
+M001,Hazel Dummer,hazel.dummer@example.org,,Bristol,2023-02-14
+M002,Robin Notreal,robin.notreal@example.org,robin.home@example.net,Leeds,2023-03-01
+M003,Fern Placeholder,fern.placeholder@example.org,,Cardiff,2023-04-19
+M004,Wren Specimen,wren.specimen@example.org,hazel.dummer@example.org,Glasgow,2023-05-07
+M005,Iris Testwell,iris.testwell@example.org,,Bristol,2023-06-22
+M006,Linnet Dummer,linnet.dummer@example.org,linnet.d@example.net,York,2023-08-30
+M007,Sorrel Notreal,sorrel.notreal@example.org,,Leeds,2023-10-11
+M008,Finch Placeholder,finch.placeholder@example.org,robin.notreal@example.org,Norwich,2024-01-05
+M009,Holly Specimen,holly.specimen@example.org,,Cardiff,2024-02-28
+M010,Teal Testwell,teal.testwell@example.org,teal.t@example.net,York,2024-03-16

@@ -1,0 +1,41 @@
+patient_id	name	dob	postcode	diagnosis	height_cm	weight_kg	visit_date	clinician
+P-0001	Kestrel Dummer	1957-06-16	SW1A 4HE	Migraine	157	86	2026-08-13	Dr Specimen
+P-0002	Nettle Sampleton	1975-07-16	G1 1UZ	Anxiety disorder	156	93	2026-10-14	Dr Demoson
+P-0003	Maple Placeholder	1982-11-18	CF10 3XU	Anxiety disorder	160	52	2026-07-16	Dr Placeholder
+P-0004	Fern Exemplar	1976-11-05	LS1 3AD	Fractured wrist	191	67	2026-05-14	Dr Specimen
+P-0005	Poppy Exemplar	1977-04-26	CF10 1RB	Migraine	188	65	2026-08-14	Dr Sampleton
+P-0006	Gorse Sampleton	2004-09-15	BS1 5WN	Hypertension	176	74	2025-03-04	Dr Testwell
+P-0007	Juniper Sampleton	1988-12-20	BS1 2YD	None recorded	172	74	2025-01-28	Dr Exemplar
+P-0008	Fern Specimen	1987-02-16	BS1 3XG	Asthma	170	91	2026-09-18	Dr Exemplar
+P-0009	Fern Mockley	1942-09-26	LS1 1BT	Asthma	182	50	2026-11-06	Dr Exemplar
+P-0010	Kestrel Exemplar	1966-05-18	G1 1UL	Migraine	181	55	2026-04-11	Dr Exemplar
+P-0011	Bramble Testwell	1953-07-28	G1 7RN	Hypertension	189	53	2025-06-08	Dr Dummer
+P-0012	Elder Mockley	2015-09-24	G1 1JT	Asthma	171	53	2026-04-28	Dr Sampleton
+P-0013	Elder Mockley	1941-04-02	YO1 8GX	Anxiety disorder	166	102	2026-10-20	Dr Demoson
+P-0014	Iris Demoson	2014-12-21	YO1 9TW	Anxiety disorder	189	70	2026-03-08	Dr Notreal
+P-0015	Hazel Dummer	2012-07-20	YO1 7XE	Migraine	173	57	2026-02-04	Dr Mockley
+P-0016	Maple Demoson	1953-02-15	YO1 4ZF	Type 2 diabetes	193	56	2026-06-06	Dr Sampleton
+P-0017	Kestrel Mockley	2004-12-05	SW1A 7GP	Anxiety disorder	178	110	2025-09-13	Dr Exemplar
+P-0018	Bramble Notreal	2011-11-27	LS1 4JB	Hypertension	183	106	2026-08-28	Dr Fakeman
+P-0019	Cedar Dummer	1941-12-07	G1 5SW	Asthma	191	108	2025-09-19	Dr Sampleton
+P-0020	Juniper Testwell	1944-12-11	LS1 1GR	Hypertension	157	94	2026-12-01	Dr Testwell
+P-0021	Kestrel Fakeman	1956-12-08	BS1 5GX	None recorded	176	106	2025-04-02	Dr Testwell
+P-0022	Nettle Demoson	1996-11-19	CF10 9JT	Hypertension	157	103	2026-03-28	Dr Exemplar
+P-0023	Poppy Notreal	1991-02-08	YO1 2LH	Fractured wrist	184	59	2026-11-03	Dr Specimen
+P-0024	Laurel Sampleton	1994-02-09	SW1A 4FE	Hypertension	178	55	2025-08-18	Dr Notreal
+P-0025	Iris Specimen	1942-09-20	CF10 3TP	Migraine	174	71	2025-08-13	Dr Sampleton
+P-0026	Gorse Placeholder	1947-12-12	SW1A 5UQ	None recorded	165	80	2025-12-01	Dr Mockley
+P-0027	Nettle Dummer	1973-09-21	BS1 5TW	Asthma	194	85	2026-11-28	Dr Fakeman
+P-0028	Gorse Exemplar	1979-09-18	SW1A 8YH	Migraine	154	87	2026-08-09	Dr Testwell
+P-0029	Olive Notreal	1975-12-01	CF10 3HF	Anxiety disorder	153	67	2025-10-23	Dr Placeholder
+P-0030	Kestrel Notreal	1940-06-05	CF10 9XT	Hypertension	179	71	2026-03-28	Dr Notreal
+P-0031	Poppy Sampleton	1950-05-24	YO1 4JS	Type 2 diabetes	186	69	2025-11-04	Dr Dummer
+P-0032	Elder Placeholder	1945-03-23	YO1 9WU	Migraine	178	109	2026-04-20	Dr Sampleton
+P-0033	Kestrel Fakeman	2011-07-28	SW1A 8AX	Type 2 diabetes	151	106	2026-05-13	Dr Demoson
+P-0034	Nettle Fakeman	1991-10-27	SW1A 7EL	Hypertension	180	61	2026-06-06	Dr Mockley
+P-0035	Nettle Fakeman	2000-03-27	BS1 9NN	None recorded	179	94	2025-08-14	Dr Notreal
+P-0036	Bramble Mockley	1957-02-16	YO1 8PL	Fractured wrist	168	53	2025-05-16	Dr Demoson
+P-0037	Nettle Fakeman	1948-10-20	YO1 8BX	Anxiety disorder	171	96	2025-12-03	Dr Demoson
+P-0038	Fern Testwell	1985-10-05	SW1A 4NG	Fractured wrist	165	53	2026-06-02	Dr Exemplar
+P-0039	Dahlia Notreal	1994-09-23	LS1 5HF	Type 2 diabetes	161	75	2025-10-11	Dr Testwell
+P-0040	Olive Exemplar	1947-05-25	LS1 5YN	Migraine	195	52	2025-08-02	Dr Notreal

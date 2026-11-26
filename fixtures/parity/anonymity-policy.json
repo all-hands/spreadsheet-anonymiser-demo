@@ -1,0 +1,1 @@
+{"version":1,"columns":[{"name":"name","action":"hash"},{"name":"dob","action":"age-band"},{"name":"note","action":"redact"}]}

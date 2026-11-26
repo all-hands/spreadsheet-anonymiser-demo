@@ -1,0 +1,178 @@
+@import 'tailwindcss';
+
+@theme {
+  --font-sans: ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+
+  --text-xs--line-height: 1rem;
+  --text-sm--line-height: 1.25rem;
+  --text-base--line-height: 1.5rem;
+  --text-lg--line-height: 1.75rem;
+  --text-xl--line-height: 1.75rem;
+  --text-2xl--line-height: 2rem;
+  --text-3xl--line-height: 2.25rem;
+  --text-4xl--line-height: 2.5rem;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-border: var(--border);
+
+  --color-surface-2: var(--surface-2);
+  --color-surface: var(--surface);
+  --color-surface-hover: var(--surface-hover);
+
+  --color-muted: var(--muted);
+  --color-success: rgb(var(--success));
+  --color-danger: rgb(var(--danger));
+  --color-warning: rgb(var(--warning));
+  --color-info: rgb(var(--info));
+  --color-plum: rgb(var(--plum));
+  --color-violet: rgb(var(--violet));
+
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+  --color-accent-foreground: var(--accent-foreground);
+}
+
+@custom-variant hover (&:hover);
+
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: #e5e7eb;
+  }
+
+  input::placeholder,
+  textarea::placeholder {
+    color: #9ca3af;
+  }
+
+  button:not(:disabled),
+  [role='button']:not(:disabled) {
+    cursor: pointer;
+  }
+}
+
+@layer base {
+  :root {
+    --background: #030712;
+    --surface: #111827;
+    --surface-2: #1F2937;
+    --surface-hover: #374151;
+    --foreground: #FFFFFF;
+    --muted: #A9AFB9;
+    --border: #1F2937;
+    --accent: #2563EB;
+    --accent-hover: #3B82F6;
+    --accent-foreground: #FFFFFF;
+    --success: 52 211 153;
+    --danger: 248 113 113;
+    --warning: 251 191 36;
+    --info: 96 165 250;
+    --plum: 192 132 252;
+    --violet: 167 139 250;
+  }
+
+  :root[data-theme-mode='light'] {
+    --success: 4 120 87;
+    --danger: 185 28 28;
+    --warning: 180 83 9;
+    --info: 29 78 216;
+    --plum: 126 34 206;
+    --violet: 109 40 217;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@media print {
+  aside,
+  header,
+  nav,
+  button {
+    display: none !important;
+  }
+
+  :root,
+  :root[data-theme-mode] {
+    --background: #ffffff !important;
+    --surface: #f5f5f5 !important;
+    --surface-2: #f5f5f5 !important;
+    --surface-hover: #f5f5f5 !important;
+    --foreground: #111827 !important;
+    --muted: #4b5563 !important;
+    --border: #cccccc !important;
+    --accent: #1f2937 !important;
+    --accent-hover: #1f2937 !important;
+    --accent-foreground: #ffffff !important;
+    --success: 4 120 87 !important;
+    --danger: 185 28 28 !important;
+    --warning: 180 83 9 !important;
+    --info: 29 78 216 !important;
+    --plum: 126 34 206 !important;
+    --violet: 109 40 217 !important;
+  }
+
+  body {
+    background: white !important;
+    color: black !important;
+  }
+
+  main,
+  .flex-1 {
+    flex: none !important;
+    width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .border {
+    border-color: #ccc !important;
+  }
+
+  .bg-surface-2,
+  .bg-surface {
+    background: #f5f5f5 !important;
+  }
+
+  .text-muted {
+    color: #666 !important;
+  }
+
+  .text-success {
+    color: #16a34a !important;
+  }
+
+  .text-danger {
+    color: #dc2626 !important;
+  }
+
+  .text-info {
+    color: #2563eb !important;
+  }
+
+  .text-plum {
+    color: #9333ea !important;
+  }
+
+  .space-y-6>div {
+    page-break-inside: avoid;
+  }
+}
+.scroll-visible {
+  scrollbar-width: auto;
+  scrollbar-color: var(--muted) var(--surface-2);
+}

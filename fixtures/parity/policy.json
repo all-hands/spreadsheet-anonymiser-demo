@@ -1,0 +1,1 @@
+{"version":1,"columns":[{"name":"name","action":"hash"},{"name":"email","action":"hash"},{"name":"note","action":"redact"}]}

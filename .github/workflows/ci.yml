@@ -1,0 +1,91 @@
+name: CI
+
+on:
+  workflow_dispatch:
+
+env:
+  CARGO_TERM_COLOR: always
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  rust:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: dtolnay/rust-toolchain@683b588c487a69d01f6c6ddf40f036ff682cc2c8 # v1
+        with:
+          toolchain: stable
+          components: rustfmt, clippy
+      - uses: Swatinem/rust-cache@d1527c8f67ef9af357290475d4af4b0fab8f12e0 # v2.9.3
+      - name: Format
+        run: cargo fmt --all --check
+      - name: Clippy
+        run: cargo clippy --workspace --all-targets --locked -- -D warnings
+      - name: Test
+        run: cargo test --workspace --locked
+
+  frontend:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: dtolnay/rust-toolchain@683b588c487a69d01f6c6ddf40f036ff682cc2c8 # v1
+        with:
+          toolchain: stable
+          targets: wasm32-unknown-unknown
+      - uses: Swatinem/rust-cache@d1527c8f67ef9af357290475d4af4b0fab8f12e0 # v2.9.3
+      - name: Install wasm-bindgen-cli
+        run: cargo install wasm-bindgen-cli --version "$(bash scripts/wasm-bindgen-version.sh)" --locked
+      - name: Wasm parity tests
+        run: bash scripts/test-wasm.sh
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: frontend/package-lock.json
+      - name: Install frontend dependencies
+        working-directory: frontend
+        run: npm ci
+      - name: Build wasm package
+        working-directory: frontend
+        run: npm run build:wasm
+      - name: Lint
+        working-directory: frontend
+        run: npm run lint
+      - name: Typecheck
+        working-directory: frontend
+        run: npx tsc -b --pretty false
+      - name: Unit tests
+        working-directory: frontend
+        run: npx vitest run
+      - name: Production build
+        working-directory: frontend
+        run: npx vite build
+
+  docker:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    needs: [rust, frontend]
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - name: Build image
+        run: docker build -f docker/Dockerfile -t anonymiser:ci .
+      - name: Run container
+        run: docker run -d --name anonymiser -p 127.0.0.1:8000:8000 --read-only --cap-drop ALL --security-opt no-new-privileges:true --tmpfs /tmp anonymiser:ci
+      - name: Smoke test
+        run: bash scripts/smoke-container.sh http://127.0.0.1:8000 anonymiser:ci
+      - name: Healthcheck command succeeds
+        run: docker exec anonymiser wget -q -O /dev/null http://127.0.0.1:8000/healthz

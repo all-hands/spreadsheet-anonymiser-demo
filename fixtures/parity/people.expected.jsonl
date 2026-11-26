@@ -1,0 +1,3 @@
+{"amount":"10.5","big":"12345678901234567890","email":"d6ff1dca0b694230af3c13d1d6c2d8b3","exp":"1000.0","flag":"true","huge":"1e+21","id":"1","name":"bfd5ef8d95a9a49889f0fb0af7459c26","neg":"-0.0","note":"[REDACTED]","nothing":"","tiny":"0.00001"}
+{"amount":"","big":"","email":"6ed65f17ce586893ad756cbcd1c8505d","exp":"","flag":"","huge":"","id":"2","name":"d9e2b065e9d40c6694a62b91f5ee7485","neg":"","note":"","nothing":"","tiny":""}
+{"amount":"1.5e-7","big":"-9223372036854775808","email":"85e1036a6a6fd92010e0675a87a7eb09","exp":"123456789012345678","flag":"false","huge":"","id":"3","name":"781c3f4c0a75573d2bb50a1c31af4c2c","neg":"","note":"","nothing":"","tiny":"1e+20"}

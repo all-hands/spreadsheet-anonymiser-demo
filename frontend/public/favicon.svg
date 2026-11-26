@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Anonymiser">
+  <path d="M32 4 8 13v17c0 15 10 26 24 30 14-4 24-15 24-30V13L32 4Z" fill="#2563EB"/>
+  <path d="M32 4v56C18 56 8 45 8 30V13L32 4Z" fill="#1D4ED8"/>
+  <circle cx="32" cy="26" r="7" fill="#fff"/>
+  <path d="M19 46c1-8 6-12 13-12s12 4 13 12c-3 3-8 6-13 8-5-2-10-5-13-8Z" fill="#fff"/>
+</svg>

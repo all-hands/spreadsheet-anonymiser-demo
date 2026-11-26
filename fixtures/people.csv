@@ -1,0 +1,11 @@
+person_id,name,email,dob,score,joined
+P001,Ada Example,ada@example.org,1990-05-01,27,2021-06-30
+P002,Ben Sample,ben@example.org,1990-11-23,31,2021-07-02
+P003,Cleo Test,cleo@example.org,1991-02-14,29,2022-01-15
+P004,Dev Placeholder,dev@example.org,1971-03-03,64,2020-09-09
+P005,Eli Fictional,eli@example.org,1972-08-17,68,2020-10-21
+P006,Fay Synthetic,fay@example.org,1973-12-30,61,2023-03-01
+P007,Gus Invented,gus@example.org,1985-07-07,45,2019-05-12
+P008,Hana Mock,hana@example.org,1985-07-19,47,2019-05-30
+P009,Ivo Dummy,ivo@example.org,1958-01-25,88,2018-02-02
+P010,Jun Imaginary,jun@example.org,2003-09-09,12,2024-04-04

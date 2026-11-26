@@ -1,0 +1,4 @@
+{"name":"Ann, Jr","id":1,"email":"ann@example.com","note":"line one\nline two é \"q\" \\ /","amount":10.50,"big":12345678901234567890,"neg":-0,"exp":1e3,"tiny":0.00001,"huge":1e21,"flag":true,"nothing":null}
+
+{"id":2,"email":"BO@Example.com","name":"Bo"}
+{"id":3,"name":"Çelik 日本","email":"c@example.com","amount":1.5E-7,"big":-9223372036854775808,"exp":123456789012345678,"tiny":100000000000000000000.0,"flag":false}

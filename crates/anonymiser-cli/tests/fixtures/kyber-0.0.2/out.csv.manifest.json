@@ -1,0 +1,55 @@
+{
+  "kind": "anonymiser-manifest",
+  "schema_version": 1,
+  "tool_version": "0.0.2",
+  "created_utc": "2026-11-10T20:53:52Z",
+  "dataset": "demo",
+  "oneshot": false,
+  "reversible": false,
+  "salt": {
+    "id": "32470491009e2a3c",
+    "format": "anonsalt-v1"
+  },
+  "key_schedule": {
+    "kdf": "hkdf-sha512",
+    "argon2id": null,
+    "key_id": "a92e763233d91030"
+  },
+  "tokens": {
+    "encoding": "hex",
+    "bytes": 16
+  },
+  "columns": [
+    {
+      "index": 0,
+      "name": "name",
+      "policy": "kyber-aes",
+      "canon": "auto",
+      "group": null
+    },
+    {
+      "index": 1,
+      "name": "email",
+      "policy": "hash",
+      "canon": "email",
+      "group": null
+    },
+    {
+      "index": 2,
+      "name": "note",
+      "policy": "keep",
+      "canon": "auto",
+      "group": null
+    }
+  ],
+  "input": {
+    "name": "in.csv",
+    "sha256": "2877bcaf78aa95cd0c50e01c41825de4482bf158e57ce054d8bc73bced167392",
+    "rows": 3
+  },
+  "output": {
+    "name": "out.csv",
+    "sha256": "21c33bb9c5ba15ecd8f9036bc4024e0d66f8899032d00fe8fb894b22668ddbd7",
+    "rows": 3
+  }
+}

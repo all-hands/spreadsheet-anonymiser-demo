@@ -1,0 +1,12 @@
+/target
+*.salt
+*.mapping
+master_key.bin
+frontend/src/wasm-pkg
+frontend/node_modules
+frontend/dist
+__pycache__/
+*.pyc
+.venv/
+.env
+.env.*

@@ -1,0 +1,6 @@
+﻿id,name,email,note,amount
+1,"Ann, Jr",ann@example.com,"line one
+line two",10.50
+2,Bo,BO@Example.com,"say ""hi""",
+
+3,"Çelik 日本",c@example.com,plain,4,,,,

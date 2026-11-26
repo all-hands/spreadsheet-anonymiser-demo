@@ -1,0 +1,4 @@
+{"version":1,"columns":[
+  {"name":"name","index":0,"action":"kyber-aes"},
+  {"name":"email","index":1,"action":"hash","type":"email"},
+  {"name":"note","index":2,"action":"keep"}]}

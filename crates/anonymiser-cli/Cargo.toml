@@ -1,0 +1,38 @@
+[package]
+name = "anonymiser-cli"
+description = "Native CLI adapter over anonymiser-core"
+license.workspace = true
+keywords.workspace = true
+repository.workspace = true
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+
+[[bin]]
+name = "anonymiser"
+path = "src/main.rs"
+
+[dependencies]
+anonymiser-core = { workspace = true }
+clap = { version = "4", features = ["derive"] }
+csv = "1"
+getrandom = "0.4"
+anyhow = "1.0"
+zeroize = { workspace = true }
+serde = { version = "1.0.229", features = ["derive"] }
+serde_json = "1.0.154"
+hex = "0.4"
+toml = "1"
+sha2 = { workspace = true }
+
+[target.'cfg(windows)'.dependencies]
+windows-sys = { version = "0.61", features = [
+    "Win32_Foundation",
+    "Win32_Security",
+    "Win32_Security_Authorization",
+    "Win32_Storage_FileSystem",
+] }
+
+[dev-dependencies]
+anonymiser-core = { workspace = true }
+serde_json = "1.0.154"
